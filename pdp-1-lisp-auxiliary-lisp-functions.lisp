@@ -63,13 +63,13 @@
 (rplacd (quote dex)
         (quote (fexpr (lambda (x a)
                         (rplacd (car x)
-                                (cond (quote expr) (cdr x)))))))
+                                (cons (quote expr) (cdr x)))))))
 
 
 (rplacd (quote dfx)
         (quote (fexpr (lambda (x a)
                         (rplacd (car x)
-                                (cond (quote fexpr) (cdr x)))))))
+                                (cons (quote fexpr) (cdr x)))))))
 
 
 (rplacd (quote difflist)
