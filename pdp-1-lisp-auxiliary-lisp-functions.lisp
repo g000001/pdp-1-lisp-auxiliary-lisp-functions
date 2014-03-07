@@ -60,6 +60,12 @@
                                 (cons (quote expr) (cdr x)))))))
 
 
+(rplacd (quote dex)
+        (quote (fexpr (lambda (x a)
+                        (rplacd (car x)
+                                (cond (quote expr) (cdr x)))))))
+
+
 (rplacd (quote dfx)
         (quote (fexpr (lambda (x a)
                         (rplacd (car x)
